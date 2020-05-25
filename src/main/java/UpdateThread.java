@@ -63,6 +63,7 @@ public class UpdateThread extends Thread{
                         rcon = connect();
                     }
                     String content = rcon.command("list");
+                    if(!content.contains(":")) content += ":";
                     String[] strings = content.split(":");
                     result = ("<html> (" + SIMPLE_DATE_FORMAT.format(System.currentTimeMillis()) + " )\n" + strings[0] + "\n" + strings[1] + "</html>").replace(",", "님\n").replace("\n", "<p>");
                     this.frame.setTitle(this.ip + ":" + this.port + "  |  " + strings[0]);
