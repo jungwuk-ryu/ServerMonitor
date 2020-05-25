@@ -7,6 +7,18 @@
     <groupId>hancho.serverMonitor</groupId>
     <artifactId>serverMonitor</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>rkon</groupId>
+            <artifactId>rkon-core</artifactId>
+            <version>1.1.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/rkon-core-1.1.2.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
